@@ -1,0 +1,109 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-md-12" style="margin: 10px">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                使用者 UserID 維護畫面
+            </div>
+            <!-- 表格開始 -->
+            <div style="margin: 10px" id="tbUserData">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>動作</th>
+                            <th>登入帳號</th>
+                            <th>中文姓名</th>
+                            <th>建立日期</th>
+                            <th>是否為管理者帳號</th>
+                            <th>備註</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="item in gridData">
+                            <td>
+                                <button class="btn btn-info btn-xs" v-on:click="edit(item)">編輯</button>
+                                <button class="btn btn-info btn-xs" v-on:click="remove(item)">刪除</button>
+                            </td>
+                            <td>
+                                <span>{{item.userID}}</span>
+                            </td>
+                            <td>
+                                <span>{{item.chtName}}</span>
+                            </td>
+                            <td>
+                                <span>{{item.createDate}}</span>
+                            </td>
+                            <td>
+                                <div v-if="item.isAdmin == true">
+                                    <span style="color:blue">
+                                        是
+                                    </span>
+                                </div>
+                                <div v-if="item.isAdmin == false">
+                                    <span style="color:green">
+                                        否
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <span>{{item.remarks}}</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br />
+                <button type="button" id="btnAddNew" class="btn btn-primary">新增</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var userFuncMaintainData;
+    var insUserFuncMaintainData;
+    //建立 jQuery Backend Service Client 物件
+    var client = new jQueryBackendService('http://localhost:4565/api/');
+
+    function bindingData() {
+        insUserFuncMaintainData = new Vue({
+            el: '#tbUserData',
+            data: {
+                gridData: userFuncMaintainData
+            }
+        });
+    }
+
+    function getData() {
+
+        client.executeCommand(
+            'MyDemoBO',
+            'MyDemoBO',
+            'Service',
+            'GetHumanResources',
+            {},
+            function (data) {
+                insUserFuncMaintainData.gridData = data;
+            },
+            function (err) {
+                alert('取得資料時發生錯誤，遠端伺服器傳回:' + err.message);
+            }
+        );
+
+    }
+
+    $(document).ready(function () {
+
+        bindingData();
+
+        getData();
+
+    });
+
+</script>

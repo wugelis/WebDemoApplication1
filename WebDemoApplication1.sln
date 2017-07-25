@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDemoApplication1", "WebDemoApplication1\WebDemoApplication1.csproj", "{50F8AB1D-C415-44F3-8EEE-1512A7E17DDC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BO", "BO", "{12B4373F-200A-432A-A306-DB9F416217C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebHost", "WebHost", "{4361B6BC-45B1-4D1B-93AF-685EBE0591FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VO", "VO", "{B381C974-51CA-4AB8-93E8-CF5C081B09F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{28C7368B-F7FE-474D-8270-91C244D511A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDemoBO", "MyDemoBO\MyDemoBO.csproj", "{88EB59F5-F1D5-4F62-B449-6FB26D28D765}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NormuraRuleEntties", "NormuraRuleEntties\NormuraRuleEntties.csproj", "{FD53EE78-311F-4FD1-9015-E426B161C409}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NormuraRuleDBModels", "NormuraRuleDBModels\NormuraRuleDBModels.csproj", "{BE55EA95-4F27-4670-8FBF-5F34F02F32CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50F8AB1D-C415-44F3-8EEE-1512A7E17DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50F8AB1D-C415-44F3-8EEE-1512A7E17DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50F8AB1D-C415-44F3-8EEE-1512A7E17DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50F8AB1D-C415-44F3-8EEE-1512A7E17DDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88EB59F5-F1D5-4F62-B449-6FB26D28D765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88EB59F5-F1D5-4F62-B449-6FB26D28D765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88EB59F5-F1D5-4F62-B449-6FB26D28D765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88EB59F5-F1D5-4F62-B449-6FB26D28D765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD53EE78-311F-4FD1-9015-E426B161C409}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD53EE78-311F-4FD1-9015-E426B161C409}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD53EE78-311F-4FD1-9015-E426B161C409}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD53EE78-311F-4FD1-9015-E426B161C409}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE55EA95-4F27-4670-8FBF-5F34F02F32CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE55EA95-4F27-4670-8FBF-5F34F02F32CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE55EA95-4F27-4670-8FBF-5F34F02F32CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE55EA95-4F27-4670-8FBF-5F34F02F32CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{50F8AB1D-C415-44F3-8EEE-1512A7E17DDC} = {4361B6BC-45B1-4D1B-93AF-685EBE0591FF}
+		{88EB59F5-F1D5-4F62-B449-6FB26D28D765} = {12B4373F-200A-432A-A306-DB9F416217C4}
+		{FD53EE78-311F-4FD1-9015-E426B161C409} = {B381C974-51CA-4AB8-93E8-CF5C081B09F9}
+		{BE55EA95-4F27-4670-8FBF-5F34F02F32CA} = {28C7368B-F7FE-474D-8270-91C244D511A3}
+	EndGlobalSection
+EndGlobal
